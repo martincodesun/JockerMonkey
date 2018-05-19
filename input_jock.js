@@ -5,7 +5,7 @@
 var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
 var nebPay = new NebPay();
 
-var dappAddress = "n1emUoYaQbTixYd7cCRL3usFHLyqeN9XANZ";
+var dappAddress = "n1pRvDrDTDaLFTUkvSiBuBBSLsUEwMokMEQ";
 var InputJock = function() {
     this.intervalQuery = null;
     this.serialNumber = null;
@@ -66,7 +66,7 @@ InputJock.prototype = {
 
         self.intervalQuery = setInterval(function () {
             self.funcIntervalQuery();
-        }, 5000);
+        }, 15000);
 
     },
 
@@ -96,15 +96,18 @@ InputJock.prototype = {
         nebPay.queryPayInfo(self.serialNumber)   //search transaction result from server (result upload to server by app)
             .then(function (resp) {
                 var respObject = JSON.parse(resp);
-                if(respObject.code === 0){
-                    // 跳转到首页
-                    window.clearInterval(self.intervalQuery);
-                    $("#loading").hide();
-                    window.setTimeout(function() {
-                        window.location.href = "https://martincodesun.github.io/JockerMonkey/index.html";
-                    }, 5000);
+                // 条件有问题，暂时不限制
+                // if(respObject.code === 0){
+                //     // 跳转到首页
                     
-                }
+                //     $("#loading").hide();
+                //     window.setTimeout(function() {
+                        
+                //     }, 10000);
+                    
+                // }
+                window.clearInterval(self.intervalQuery);
+                window.location.href = "https://martincodesun.github.io/JockerMonkey/index.html";
             })
             .catch(function (err) {
                 console.log(err);

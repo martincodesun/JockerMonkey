@@ -5,7 +5,7 @@
 var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
 var nebPay = new NebPay();
 
-var dappAddress = "n1emUoYaQbTixYd7cCRL3usFHLyqeN9XANZ";
+var dappAddress = "n1pRvDrDTDaLFTUkvSiBuBBSLsUEwMokMEQ";
 
 var SHOW_NUM_PER_PAGE = 10;
 
@@ -256,7 +256,7 @@ JockShow.prototype = {
     
             self.intervalGood = setInterval(function () {
                 self.funcIntervalGood($(clickObj));
-            }, 5000);
+            }, 15000);
         });
     },
 
@@ -265,14 +265,17 @@ JockShow.prototype = {
         nebPay.queryPayInfo(self.sNumGood)   //search transaction result from server (result upload to server by app)
             .then(function (resp) {
                 var respObject = JSON.parse(resp);
-                if(respObject.code === 0){
-                    var sPan = clickObj.closest("span");
-                    var sChild = sPan.find("span");
-                    var curGoodNum = parseInt(sChild.text());
-                    curGoodNum++;
-                    clickObj.closest("span").find("span").text(curGoodNum);
-                    window.clearInterval(self.intervalGood);
-                }
+                // 条件有问题，暂不限制
+                // console.log("-------resp = " + resp);
+                // if(respObject.code === 0){
+                    
+                // }
+                var sPan = clickObj.closest("span");
+                var sChild = sPan.find("span");
+                var curGoodNum = parseInt(sChild.text());
+                curGoodNum++;
+                clickObj.closest("span").find("span").text(curGoodNum);
+                window.clearInterval(self.intervalGood);
             })
             .catch(function (err) {
                 console.log(err);
@@ -299,7 +302,7 @@ JockShow.prototype = {
     
             self.intervalBad = setInterval(function () {
                 self.funcIntervalBad($(clickObj));
-            }, 5000);
+            }, 15000);
         });
     },
 
@@ -308,15 +311,16 @@ JockShow.prototype = {
         nebPay.queryPayInfo(self.sNumBad)   //search transaction result from server (result upload to server by app)
             .then(function (resp) {
                 var respObject = JSON.parse(resp);
-                if(respObject.code === 0){
-                    // 更新数字
-                    var sPan = clickObj.closest("span");
-                    var sChild = sPan.find("span");
-                    var curBadNum = parseInt(sChild.text());
-                    curBadNum++;
-                    clickObj.closest("span").find("span").text(curBadNum);
-                    window.clearInterval(self.intervalBad);
-                }
+                // if(respObject.code === 0){
+                //     // 更新数字
+                    
+                // }
+                var sPan = clickObj.closest("span");
+                var sChild = sPan.find("span");
+                var curBadNum = parseInt(sChild.text());
+                curBadNum++;
+                clickObj.closest("span").find("span").text(curBadNum);
+                window.clearInterval(self.intervalBad);
             })
             .catch(function (err) {
                 console.log(err);
@@ -345,7 +349,7 @@ JockShow.prototype = {
     
             self.intervalBad = setInterval(function () {
                 self.funcIntervalBad($(clickObj));
-            }, 5000);
+            }, 15000);
         });
     },
 
@@ -392,7 +396,7 @@ JockShow.prototype = {
     
             self.intervalComment = setInterval(function () {
                 self.funcIntervalComment();
-            }, 5000);
+            }, 15000);
     
         });
     },
@@ -402,22 +406,23 @@ JockShow.prototype = {
         nebPay.queryPayInfo(self.sNumComment)   //search transaction result from server (result upload to server by app)
             .then(function (resp) {
                 var respObject = JSON.parse(resp);
-                if(respObject.code === 0){
-                    // 增加评论个数
-                    var curCommentNum = parseInt(self.curClickCommentJQ.find("span").text());
-                    curCommentNum++;
-                    self.curClickCommentJQ.find("span").text(curCommentNum);
+                // if(respObject.code === 0){
+                    
+                // }
+                // 增加评论个数
+                var curCommentNum = parseInt(self.curClickCommentJQ.find("span").text());
+                curCommentNum++;
+                self.curClickCommentJQ.find("span").text(curCommentNum);
 
-                    // 添加评论到列表中
-                    $("#no_comment_warning").hide();
-                    self.addComment.commentTime = self.getNowFormatDate();
-                    var comment_list = template(document.getElementById('comment_list_t').innerHTML);
-                    var data = [];
-                    data.push(self.addComment);
-                    var comment_list_html = comment_list({list: data});
-                    $("#comment_list").prepend(comment_list_html);
-                    window.clearInterval(self.intervalComment);
-                }
+                // 添加评论到列表中
+                $("#no_comment_warning").hide();
+                self.addComment.commentTime = self.getNowFormatDate();
+                var comment_list = template(document.getElementById('comment_list_t').innerHTML);
+                var data = [];
+                data.push(self.addComment);
+                var comment_list_html = comment_list({list: data});
+                $("#comment_list").prepend(comment_list_html);
+                window.clearInterval(self.intervalComment);
             })
             .catch(function (err) {
                 console.log(err);
