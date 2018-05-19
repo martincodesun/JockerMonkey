@@ -135,7 +135,6 @@ JockShow.prototype = {
                     else {
                         console.log("no need attation");
                     }
-                    console.log(obj);
                 } else {
                     console.log("Get Data From Constract Faield");
                 }
@@ -161,7 +160,6 @@ JockShow.prototype = {
     },
 
     parseJockList: function(jock_list_obj) {
-        console.log(JSON.stringify(jock_list_obj));
         if (jock_list_obj.data && jock_list_obj.data.length > 0) {
             var jock_list = template(document.getElementById('jock_list_t').innerHTML);
             var jock_list_html = jock_list({list: jock_list_obj.data});
@@ -178,7 +176,6 @@ JockShow.prototype = {
     },
 
     parseCommentList: function(comment_obj) {
-        console.log(JSON.stringify(comment_obj));
         $("#comment_list").empty();
         if (comment_obj.data && comment_obj.data.length > 0) {
             var comment_list = template(document.getElementById('comment_list_t').innerHTML);

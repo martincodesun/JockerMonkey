@@ -89,7 +89,6 @@ InputJock.prototype = {
     },
 
     cbPush: function(resp) {
-        console.log("-------------response of push: " + JSON.stringify(resp))
     },
 
     funcIntervalQuery: function() {
@@ -102,7 +101,7 @@ InputJock.prototype = {
                     window.clearInterval(self.intervalQuery);
                     $("#loading").hide();
                     window.setTimeout(function() {
-                        window.location.href = "index.html";
+                        window.location.href = "https://martincodesun.github.io/JockerMonkey/index.html";
                     }, 5000);
                     
                 }
