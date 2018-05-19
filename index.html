@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>猴子请来的"梗"</title>
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="lib/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css">
+<!-- Dropdownhover CSS -->
+<link rel="stylesheet" href="lib/bootstrap-4.0.0-dist/css/bootstrap-dropdownhover.min.css" type="text/css">
+<!-- fonts awesome -->
+<link rel="stylesheet" href="lib/font/css/font-awesome.min.css" type="text/css">
+<!-- Plugin CSS -->
+<link rel="stylesheet" href="lib/animation/animate.min.css" type="text/css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style_index.css" type="text/css">
+<link rel="stylesheet" href="css/commet_list.css" type="text/css">
+<!-- Owl Carousel Assets -->
+<link href="lib/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="lib/owl-carousel/owl.theme.css" rel="stylesheet">
+
+<link rel="stylesheet" href="lib/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/style_list.css"/>
+<link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+<link rel="stylesheet" href="css/commet_list.css" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style_loading.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css">
+.navbar-inverse .navbar-nav>li>a {
+	color: #222;
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover {
+	background-color: transparent;
+	color: #F2552C;
+}
+.navbar {
+    min-height: 64px;
+    margin-bottom: 0px;
+}
+</style>
+</head>
+
+<body>
+ 
+
+<!-- Preloader -->
+<div id="preloader">
+	<div id="loading">
+	</div>
+</div>
+<header>
+	<!-- top-menu -->
+	<div class="top-menu">
+		<!-- mainNav -->
+		<div id="mainNav" class="navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<nav class="navbar navbar-inverse navbar-default">
+
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" width="300"></a>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeIn fadeInLeft fadeInUp fadeInRight" style="margin: 12px 0px 0 0;">
+							<ul class="nav navbar-nav">
+								<li><a href="index.html">首页</a></li>
+								<li><a href="input_jock.html">发布一个"梗"</a></li>
+							</ul>
+							<!-- /.navbar-collapse -->
+						</div>
+
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- /mainNav -->
+	</div>
+	<!-- /top-menu -->
+
+</header>
+<div class="home_news">
+	<div class="loader" id="loading_data">
+			<p class="loader_p"></p>
+	</div>
+	<div class="news_con" id="main_data">
+		<div class="top_tit">
+			<span class="span1">猴子请来的"梗"</span><br />
+			<span class="span2">INTERESTING</span>
+		</div>
+		<div id="jock_list">
+		</div>
+		<div class="loader" id="loading_data_list">
+				<p class="loader_p"></p>
+		</div>
+		
+		<div class="alert alert-success" role="alert" align="center" id="no_jock_warning">
+				<strong>提示 </strong>暂时还没有梗，添加第一条有趣的梗吧！
+		</div>
+	</div>
+	
+
+	<div id="pagination" class="pagination">
+	</div>
+</div>
+
+
+<!-- START FOOTER SECTION -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="flog">About Us</div>
+			</div>
+			<div class="col-12-12 col-sm-6 col-md-6">
+				<span class="address">追梦的地方：<br>
+					E-mail：<br>
+					关于我们 <br>
+			</div>
+			<div class="col-12-12 col-sm-6 col-md-6">
+				<span class="phone">科技园, 南山区, 深圳市<br>
+					 zhongzhizhi_0123@126.com<br>
+					 区块链技术追逐者，致力于开发有趣、有实用价值的区块链应用
+					</span>
+			</div>
+			<div class="col-md-12" style="margin-top:80px;">
+				<div class="copyright">
+					Copyright &copy; 2018.追梦者.
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+	<div style="display:table; width:100%; height:100%;">
+		<div style="vertical-align:middle; display:table-cell;">
+			<div class="modal-dialog modal-sm" style="width:710px;">
+				<div class="modal-content" style="border: none;padding: 5px 10px 15px 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span></button>
+					<h2 align="center" style="padding: 5px;font-size: 18px;">大家在说啥</h2>
+					<div class="loader" id="loading_comment">
+						<p class="loader_p"></p>
+					</div>
+					<div class="alert alert-success" role="alert" align="center" id="no_comment_warning">
+							<strong>提示 </strong>来抢第一条沙发吧！
+					</div>
+					<section class="comments" id="comment_list">
+					</section>
+					<div class="agile_form">
+						<h2 style="margin:0;">我的昵称</h2>
+						<input type="email" placeholder="我的昵称" name="email" required="" id="comment_title"/>
+						<h2 style="margin:0;">我也说一说</h2>
+						<textarea placeholder="我也说一说" class="w3l_summary"  required="" id="comment_content"></textarea>
+						<input type="submit" value="提交" class="agileinfo" id="comment_submit"/>
+						<div class="alert alert-success" role="alert" align="center" id="comment_warning" style="display:none;">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- jQuery -->
+<script src="lib/assets/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="lib/assets/js/bootstrap.min.js"></script>
+<script src="lib/assets/js/bootstrap-dropdownhover.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="lib/assets/js/jquery.easing.min.js"></script>
+<script src="lib/assets/js/jquery.fittext.js"></script>
+<script src="lib/assets/js/wow.min.js"></script>
+<script src="lib/assets/js/modernizr.js"></script>
+<!-- Modernizr -->
+<script src="lib/assets/js/main.js"></script>
+<!-- Resource jQuery -->
+<!--  countTo JavaScript  -->
+<script type="text/javascript" src="lib/assets/js/jquery.countTo.js"></script>
+<!-- owl carousel -->
+<script src="lib/assets/owl-carousel/owl.carousel.js"></script>
+<!--  Custom Theme JavaScript  -->
+<script src="lib/assets/js/custom.js"></script>
+<script src="lib/template.js"></script>
+<script src="lib/nebulas.js"></script>
+<script src="lib/nebPay.js"></script>
+<!-- <script src="js_back/GoldSunApi.js"></script>
+<script src="js_back/punster.js"></script>
+<script src="js_back/contentscript_j.js"></script> -->
+<script src="lib/pagination.min.js"></script>
+<script src="index.js"></script>
+
+
+
+<script id="jock_list_t" type="text/html">
+	<ul id="jock_list">
+		<%if(list.length > 0 ){%>
+			<%for(var i = 0; i < list.length; i++) {%>
+				<li class="clearfix wow bounceIn" data_from="<%:=list[i].from%>" data_id="<%:=list[i].id%>">
+					<div class="news_left">
+						<a href="javascript:void(0);"><%:=list[i].title%></a>
+						<p>
+							<%:=list[i].content%>
+						</p>
+					</div>
+					<div class="news_right">
+						<span class="tb">
+							<a href="javascript:void(0)"  class="tag_good" title="赞">
+								<img src="img\\good.png" width="30px" height="30px"/>
+							</a>
+							(<span><%:=list[i].goodNum%></span>)
+						</span>
+
+						<span class="tb">
+							<a href="javascript:void(0)"  class="tag_bad" title="踩">
+								<img src="img\\bad.png" width="30px" height="30px"/>
+							</a>
+							(<span><%:=list[i].badNum%></span>)
+						</span>
+						<span class="tb">
+							<a href="javascript:void(0)"  class="tag_comment" title="评论">
+								<img src="img\\pl.png" width="30px" height="30px"/>
+							</a>
+							(<span><%:=list[i].commentNum%></span>)
+						</span>
+						<span class="tb">
+							<a href="javascript:void(0)" title="打赏"><time class="tag_give"><img src="img\\ds.png" width="30px" height="30px"/></time></a>
+						</span>
+						<span class="tb" style="display: block;padding-top: 8px;">
+								<span style="font-size:12px;">作者：<%:=list[i].punsterName%></span>
+						</span>
+						<span class="tb" style="display: block;">
+								<span style="font-size:12px;">发布时间：<%:=list[i].publishTime%></span>
+						</span>
+					</div>
+				</li>
+			<%}%>
+		<%}%>
+	</ul>
+</script>
+
+<script id="comment_list_t" type="text/html">
+	<%if(list.length > 0 ){%>
+		<%for(var i = 0; i < list.length; i++) {%>
+			<article class="comment">
+				<a class="comment-img" href="#non">
+				<img src="img\\hztx.png" alt="" width="50" height="50">
+				<div class="comment-body">
+					<div class="text">
+						<p><%:=list[i].content%></p>
+					</div>
+					<p class="attribution">by
+						<a style="color:#ff8021;" href="javascript:void(0)"><%:=list[i].commentName%></a>
+						at <span style="color:#ff8021;"><%:=list[i].commentTime%></span>
+					</p>
+				</div>	
+			</article>
+		<%}%>
+	<%}%>
+</script>
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+
+* {
+  transition: All 0.2s ease-in-out;
+  -webkit-transition: All 0.2s ease-in-out;
+  -moz-transition: All 0.2s ease-in-out;
+  -o-transition: All 0.2s ease-in-out;
+}
+
+ul {
+  padding: 0px;
+}
+ul li {
+  list-style: none;
+}
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+.banner .slick-dots {
+  max-width: 1240px;
+  width: 50%;
+  background: url(../img/ul_dian.png) no-repeat right center;
+  text-align: right;
+  right: 15%;
+  bottom: 10px;
+}
+.banner .slick-dots li {
+  margin: 0 14px;
+}
+.banner .slick-dots li button {
+  background: url(../img/b_dot.png) no-repeat center center;
+  width: 20px;
+  height: 20px;
+}
+.banner .slick-dots li:last-child {
+  margin-right: -10px;
+  margin-left: 26px;
+}
+.banner .slick-dots li:first-child {
+  margin-right: 32px;
+}
+.banner .slick-dots .slick-active button {
+  background: url(../img/b_dot_h.png) no-repeat center center;
+}
+@media (max-width: 640px) {
+  .banner .slick-dots {
+    right: 50%;
+    margin-right: -65px;
+    bottom: 0px;
+  }
+}
+/*index 景区概括*/
+
+.top_tit {
+  text-align: center;
+  margin: 60px auto 40px;
+}
+.top_tit span {
+  display: inline-block;
+}
+.top_tit .span1 {
+  font-size: 30px;
+  font-family: fixedsys;
+  color: #81a849;
+  font-weight: bold;
+}
+.top_tit .span1 a {
+  color: #81a849;
+  background: url(../img/quan.png) no-repeat left 3px;
+  padding: 0px 10px;
+}
+.top_tit .span1 img {
+  margin-top: -26px;
+  margin-right: 6px;
+}
+.top_tit .span2 {
+  font-family: arial;
+  color: #b2b2b2;
+  font-size: 12px;
+}
+@media (max-width: 480px) {
+  .top_tit {
+    margin: 30px auto;
+  }
+}
+.top_tit .con_span {
+  color: #666;
+  font-size: 14px;
+  display: block;
+  margin: 40px auto;
+}
+@media (max-width: 320px) {
+  .top_tit .con_span {
+    margin: 20px auto;
+  }
+}
+
+/*新闻动态*/
+.home_news {
+  width: 100%;
+  background: #fff;
+}
+.home_news .news_con {
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.home_news .news_con ul {
+  width: 100%;
+}
+.home_news .news_con ul li {
+  background: #fefeca;
+  padding: 20px 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.home_news .news_con ul li .news_left {
+  width: 70%;
+  float: left;
+}
+.home_news .news_con ul li .news_left a {
+  color: #4c4c4c;
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  width: 95%;
+  display: block;
+  margin-bottom: 15px;
+  height: 25px;
+  line-height: 25px;
+}
+.home_news .news_con ul li .news_left p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 24px;
+  width: 95%;
+  max-height: 72px;
+  overflow: hidden;
+}
+.home_news .news_con ul li .news_right {
+  width: 30%;
+  float: right;
+  border-left: 1px solid #cccccc;
+  color: #acacac;
+  font-family: arial;
+  text-align: left;
+  padding-left: 6%;
+  padding-top:15px;
+  min-height: 60px;
+}
+.home_news .news_con ul li .news_right .tb {
+  padding-right: 10px;
+}
+.home_news .news_con ul li .news_right time {
+  font-size: 18px;
+}
+.home_news .news_con ul li:hover {
+  background: #81a849;
+}
+.home_news .news_con ul li:hover .news_left a {
+  color: #fff;
+}
+.home_news .news_con ul li:hover .news_left p {
+  color: #dee7d4;
+}
+.home_news .news_con ul li:hover .news_right {
+  border-left: 1px solid #9ab96d;
+  color: #c6d7b3;
+}
+.home_news .news_con ul li:hover .news_right span {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .home_news .news_con ul li .news_right {
+    padding-left: 10px;
+    padding-top: 15px;
+  }
+}
+@media (max-width: 680px) {
+  .home_news .news_con ul li .news_right span {
+    font-size: 24px;
+  }
+  .home_news .news_con ul li .news_right time {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .home_news .news_con ul li .news_left {
+    width: 68%;
+  }
+  .home_news .news_con ul li .news_right {
+    width: 32%;
+  }
+}
+@media (max-width: 480px) {
+  .home_news .news_con ul li {
+    padding: 20px 10px;
+  }
+}
+.pagination {
+  display: -webkit-flex;  
+  -webkit-justify-content: center;  
+  -webkit-align-items: center;   
+}
+/*# sourceMappingURL=style.css.map */
