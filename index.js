@@ -5,7 +5,7 @@
 var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
 var nebPay = new NebPay();
 
-var dappAddress = "n2151EJVevWTWcm4JM5oQcDbpNYgVHKpje3";
+var dappAddress = "n1emUoYaQbTixYd7cCRL3usFHLyqeN9XANZ";
 
 var SHOW_NUM_PER_PAGE = 10;
 
